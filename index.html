@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Bhusare - Astrophysicist & Radio Astronomer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-star"></div>
+
+    <!-- Particle System -->
+    <div class="particles-container"></div>
+
+    <!-- Animated Stars Background -->
+    <div class="stars"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">&lt;/YB&gt;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">⋯</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="#astrophotography">Gallery</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Personal Interests Sidebar (Hidden by default) -->
+    <div class="personal-sidebar" id="personalSidebar">
+        <div class="sidebar-header">
+            <h3>Beyond the Stars 🌟</h3>
+            <button class="close-sidebar">&times;</button>
+        </div>
+        <div class="sidebar-content">
+            <!-- This is now moved to personal.html -->
+            <div style="text-align: center; padding: 40px;">
+                <p style="color: var(--cosmic-gold); font-size: 1.2rem; margin-bottom: 20px;">
+                    🚀 Personal interests moved to dedicated page!
+                </p>
+                <a href="personal.html" class="btn">
+                    Visit Personal Page →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Yash Bhusare</h1>
+                <p class="subtitle">Radio Astronomer • FRB Hunter • Cosmic Explorer</p>
+                <p class="description">
+                    Exploring the mysteries of Fast Radio Bursts and transient phenomena in the cosmos. 
+                    PhD researcher at NCRA-TIFR, pushing the boundaries of radio astronomy and time-domain studies.
+                </p>
+                <div class="btn-group">
+                    <a href="#research" class="btn">Explore Research</a>
+                    <a href="#astrophotography" class="btn secondary">View Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/profile.jpeg" alt="Yash Bhusare" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/f5f7fa?text=Your+Photo+Here'">
+                </div>
+                <div class="about-text">
+                    <p>
+                        I grew up in Nashik, looking up at dark skies that quietly nudged me towards the universe. That curiosity eventually took me to the Indian Institute of Technology Madras (IITM), and later to the National Centre for Radio Astrophysics–TIFR (NCRA-TIFR), where I am now a PhD researcher in radio astronomy.
+                    </p>
+
+                    <p>
+                        I am a radio astronomer working on fast radio bursts (FRBs) – millisecond flashes of radio light from distant galaxies. My research focuses on understanding how these bursts are produced and what their local environments can tell us about the galaxies they live in.
+                    </p>
+
+                    <p>
+                        I lead prompt follow-up observations of FRBs to study their properties across radio frequencies and carry out low-frequency interferometric studies of persistent radio sources (PRS) associated with FRBs using uGMRT and the VLA. I have also worked on constraining faint afterglow emission by stacking observations of CHIME catalogue-I FRBs.
+                    </p>
+
+                    <p>
+                        Beyond science questions, I enjoy building the tools that make this work possible. I have been involved in the development and commissioning of a 15-m telescope at NCRA and the SWAN telescope at RRI, and I develop an automated burst-fitting pipeline while contributing to search-pipeline development within the CHIME/Slow collaboration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <h2 class="section-title">What I Work On</h2>
+            <div class="research-grid" id="researchGrid">
+                <!-- Content will be loaded from data/research.js -->
+            </div>
+        </section>
+
+        <!-- Astrophotography Preview Section -->
+        <section id="astrophotography" class="section">
+            <h2 class="section-title">Capturing the Cosmos</h2>
+            <div style="text-align: center; margin: 0 auto 40px auto; max-width: 600px;">
+                <p style="font-size: 1.1rem; color: var(--stellar-white); opacity: 0.8; text-align: center;">
+                    A glimpse into my astrophotography journey - documenting the beauty of the universe
+                </p>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-item" title="Milky Way Galaxy">
+                    <img src="images/astrophotography/Milkyway.jpg" alt="Milky Way" loading="lazy">
+                    <div class="photo-overlay">
+                        <h3>🌌 Milky Way</h3>
+                        <p>Our Galaxy arching across a dark, clear sky, built from long exposures under low light pollution.</p>
+                    </div>
+                </div>
+                <div class="photo-item" title="Lunar Surface">
+                    <img src="images/astrophotography/Moon.jpeg" alt="Moon" loading="lazy">
+                    <div class="photo-overlay">
+                        <h3>🌙 Lunar Surface</h3>
+                        <p>Close-up view of craters and maria along the lunar terminator, where sunlight creates sharp shadows.</p>
+                    </div>
+                </div>
+                <div class="photo-item" title="Star Trails over VBO">
+                    <img src="images/astrophotography/start_trail_VBO-01.jpeg" alt="Star Trails" loading="lazy">
+                    <div class="photo-overlay">
+                        <h3>⭐ Star Trails</h3>
+                        <p>Long exposure tracing the apparent circular paths of stars as the Earth rotates through the night.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="gallery.html" class="btn secondary">
+                    View Full Gallery →
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:yash@ncra.tifr.res.in">yash@ncra.tifr.res.in</a>
+                </div>
+                <div class="contact-item">
+                    <h3>🐙 GitHub</h3>
+                    <a href="https://github.com/yashbhusare" target="_blank">View Code</a>
+                </div>
+                <div class="contact-item">
+                    <h3>🏛️ ORCID</h3>
+                    <a href="https://orcid.org/0000-0002-7689-0766" target="_blank">Academic Profile</a>
+                </div>
+                <div class="contact-item">
+                    <h3>✍️ Blog</h3>
+                    <a href="https://yashbhusare.blogspot.com/" target="_blank">Cosmic Thoughts</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Yash Bhusare. Exploring the cosmos, one signal at a time. 🌌 | Built with ❤️ and cosmic curiosity</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/publications.js"></script>
+    <script src="data/research.js"></script>
+    <script src="js/cursor-gravity.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

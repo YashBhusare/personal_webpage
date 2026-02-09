@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo - Yash Bhusare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cursor-star"></div>
+    <div class="particles-container"></div>
+    <div class="stars"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">&lt;/YB&gt;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">⋯</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section class="section" style="padding-top: 140px;">
+            <div class="photo-modal-body" style="max-width: 1100px; margin: 0 auto;">
+                <div class="photo-modal-image">
+                    <img id="photoPageImage" src="" alt="">
+                </div>
+                <div class="photo-modal-text">
+                    <h3 id="photoPageTitle"></h3>
+                    <p id="photoPageDescription"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Yash Bhusare. Capturing the sky, one frame at a time. 🌌</p>
+    </footer>
+
+    <script>
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const file = params.get('file');
+            const title = params.get('title') || '';
+
+            const imgEl = document.getElementById('photoPageImage');
+            const titleEl = document.getElementById('photoPageTitle');
+            const descEl = document.getElementById('photoPageDescription');
+
+            if (!file) {
+                titleEl.textContent = 'Photo not found';
+                descEl.textContent = 'No photo was specified.';
+                return;
+            }
+
+            imgEl.src = 'images/astrophotography/' + file;
+            imgEl.alt = title;
+            titleEl.textContent = title || file;
+            descEl.textContent = 'Loading description...';
+
+            const textPath = 'images/astrophotography/' + file.replace(/\.[^.]+$/, '.txt');
+            fetch(textPath)
+                .then(function(res) { return res.ok ? res.text() : ''; })
+                .then(function(text) {
+                    descEl.textContent = text || 'Description coming soon.';
+                })
+                .catch(function() {
+                    descEl.textContent = 'Description coming soon.';
+                });
+        })();
+    </script>
+
+    <script src="js/cursor-gravity.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

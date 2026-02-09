@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Yash Bhusare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-star"></div>
+
+    <!-- Particle System -->
+    <div class="particles-container"></div>
+
+    <!-- Animated Stars Background -->
+    <div class="stars"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">&lt;/YB&gt;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">⋯</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="index.html#astrophotography">Gallery</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="height: 50vh; margin-top: 80px;">
+            <div class="hero-content">
+                <h1 style="font-size: 3.5rem;">Publications & Research</h1>
+                <p class="subtitle">Radio Astronomy • Fast Radio Bursts • Time-Domain Studies</p>
+            </div>
+        </section>
+
+        <!-- Instructions Section -->
+        <section class="section">
+            <div class="publications-container">
+                <div class="pub-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="statPublications">?</span>
+                        <span class="stat-label">Publications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="statCitations">?</span>
+                        <span class="stat-label">Citations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="statHours">82.5</span>
+                        <span class="stat-label">Observing Hours</span>
+                    </div>
+                </div>
+
+                <div class="publications-list">
+                    <div id="publicationsList">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Yash Bhusare. Exploring the cosmos, one signal at a time. 🌌</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/publications.js"></script>
+    <script src="js/cursor-gravity.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
